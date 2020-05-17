@@ -18,6 +18,7 @@ struct ReserveStation {
     int Addr;
     int Fu;
     int LineNum;
+    bool Inqueue;
 };
 
 struct FUState {
@@ -65,6 +66,7 @@ class TMSLSimulator {
         void grabFU(int l, int rst);
         void doFU(int clock);
         void doCollect(int clock);
+        void dequeFU();
         
 };
 

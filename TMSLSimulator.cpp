@@ -6,8 +6,18 @@ using namespace std;
 struct Line lines[2000000];
 int lineRecords[2000000][3];
 int records[2000000][3]; // finished cycle of every stage 
+bool recordsWritten[2000000];
+
 list<WindowMember> window;
 int rstation_busy_num[3] = {0, 0, 0};
+bool hasJump = false;
+
+queue<int> A_FU_q;
+queue<int> M_FU_q;
+queue<int> L_FU_q;
+
+int cur_line_to_launch = 0;
+int old_cur_line_to_launch = 0;
 
 TMSLSimulator::TMSLSimulator() {
     this->lineNum = 0;
@@ -18,6 +28,7 @@ TMSLSimulator::TMSLSimulator() {
         this->rStations[i].Qk = -1;
         this->rStations[i].LineNum = -1;
         this->rStations[i].Fu = -1;
+        this->rStations[i].Inqueue = false;
     }
     for (int i=0; i<7; ++i) {
         this->fuStates[i].owner = -1;
@@ -59,7 +70,7 @@ void TMSLSimulator::readLines(char* inputFile) {
         // separate line by commas
         while ((retptr=strtok(ptr, ",")) != NULL) {
             strcpy(ops[j], retptr);
-            printf("%s\n", ops[j]);
+            // printf("%s\n", ops[j]);
             j++;
             ptr = NULL;
         }
@@ -90,6 +101,7 @@ void TMSLSimulator::readLines(char* inputFile) {
                 sscanf(ops[2], "%x", &lines[this->lineNum].op[0]);
                 break;
             case 'J':
+                // printf("hhhhhhhhhhhhhhhhhhhhhh\n");
                 sscanf(ops[1], "%x", &lines[this->lineNum].op[0]);
                 sscanf(ops[2], "R%d", &lines[this->lineNum].rg[0]);
                 sscanf(ops[3], "%x", &lines[this->lineNum].op[1]);                
@@ -101,6 +113,7 @@ void TMSLSimulator::readLines(char* inputFile) {
         }
         this->lineNum++;
     }
+    for (int i = 0;i < this->lineNum; ++i) recordsWritten[i] = false;
 }
 
 int TMSLSimulator::doLaunchLines(int start) {
@@ -110,12 +123,15 @@ int TMSLSimulator::doLaunchLines(int start) {
     WindowMember cur_wm;
     bool launched = false;
     if ((rstation_busy_num[0] + rstation_busy_num[1] + rstation_busy_num[2]) >= 12) return ret;
+    if (hasJump) return ret;
     for (int i=start; i<this->lineNum; ++i) {
+        // printf("hhhhhhhhhhhhhhhhhhhhhh\n");
         Line cur = lines[i];
-        if (lines[i].cmd == 'A' || lines[i].cmd == 'S' || lines[i].cmd == 'J') {
-            if (rstation_busy_num[0] >= 6) continue;
+        if (lines[i].cmd == 'A' || lines[i].cmd == 'S') {
+            if (rstation_busy_num[0] >= 6) return ret;
             for (int k=0; k<6; ++k) {
                 if (!this->rStations[k].Busy) {
+                    // printf("hhhhhhhhhhhhhhhhhhhhhh\n");
                     rstation_busy_num[0]++;
                     this->rStations[k].Busy = true;
                     if (this->registers[cur.rg[1]].stat != -1) this->rStations[k].Qj = this->registers[cur.rg[1]].stat;
@@ -142,7 +158,7 @@ int TMSLSimulator::doLaunchLines(int start) {
                 }
             }
         } else if (lines[i].cmd == 'M' || lines[i].cmd == 'D') {
-            if (rstation_busy_num[1] >= 3) continue;
+            if (rstation_busy_num[1] >= 3) return ret;
             for (int k=6; k<9; ++k) {
                 if (!this->rStations[k].Busy) {
                     rstation_busy_num[1]++;
@@ -171,7 +187,8 @@ int TMSLSimulator::doLaunchLines(int start) {
                 }
             }          
         } else if (lines[i].cmd == 'L') {
-            if (rstation_busy_num[2] >= 3) continue;
+            // printf("hhhhhhhhhhhhhhhhhhhhhh\n");
+            if (rstation_busy_num[2] >= 3) return ret;
             for (int k=9; k<12; ++k) {
                 if (!this->rStations[k].Busy) {
                     rstation_busy_num[2]++;
@@ -192,7 +209,7 @@ int TMSLSimulator::doLaunchLines(int start) {
                 }
             } 
         } else if (lines[i].cmd == 'J') {
-            if (rstation_busy_num[0] >= 6) continue;
+            if (rstation_busy_num[0] >= 6) return ret;
             for (int k=0; k<6; ++k) {
                 if (!this->rStations[k].Busy) {
                     rstation_busy_num[0]++;
@@ -212,6 +229,8 @@ int TMSLSimulator::doLaunchLines(int start) {
 
                     ret++;
                     launched = true;
+                    // printf("set Jump hhhhhhhhhhhhhhhhhhhhhh\n");
+                    hasJump = true;
                     break;
                 }
             }   
@@ -229,27 +248,35 @@ int TMSLSimulator::doLaunchLines(int start) {
 
 void TMSLSimulator::doClocks() {
     int clock = 1;
-    int cur_line_to_launch = 0;
-    int old_cur_line_to_launch = 0;
     while (true) {
-        // printf("%d\n",cur_line_to_launch);
+        // printf("clock %d\n", clock);
+        if ((cur_line_to_launch & 0xfff) == 0xfff) printf("%d\n",cur_line_to_launch);
         if (cur_line_to_launch >= this->lineNum && window.empty()) break;
 
         this->doCollect(clock);
 
+        // if (!hasJump) printf("No Jump!\n");
         if (cur_line_to_launch < this->lineNum) {
             // launch
-            old_cur_line_to_launch = cur_line_to_launch;
-            cur_line_to_launch = this->doLaunchLines(old_cur_line_to_launch);
-            for (int i = old_cur_line_to_launch; i < cur_line_to_launch; ++i) {
-                lineRecords[i][0] = clock;
+            if (!hasJump) {
+                old_cur_line_to_launch = cur_line_to_launch;
+                cur_line_to_launch = this->doLaunchLines(old_cur_line_to_launch);
+                for (int i = old_cur_line_to_launch; i < cur_line_to_launch; ++i) {
+                    if (!recordsWritten[i]) {
+                        lineRecords[i][0] = clock;
+                    }
+                }
             }
         }
 
-        // grab FU
+        // grab FU, launched time order
         for (std::list<WindowMember>::iterator it=window.begin(); it != window.end(); ++it) {
             this->grabFU((*it).line_index, (*it).rs_index);
         }
+
+        // deque FU, ready order
+        this->dequeFU();
+
         // do FU
         this->doFU(clock);
 
@@ -263,59 +290,83 @@ void TMSLSimulator::doClocks() {
 void TMSLSimulator::grabFU(int l, int rst) {
     ReserveStation& cur_rs = this->rStations[rst];
     Line& cur_l = lines[l];
-    if (cur_rs.Fu == -1) {
+    if (cur_rs.Fu == -1 && !cur_rs.Inqueue) {
         if (cur_l.cmd == 'A' || cur_l.cmd == 'S') {
             if (cur_rs.Qj == -1 && cur_rs.Qk == -1) { // Operands is ready
-                for (int k = 0; k < 3; ++k) {
-                    if (this->fuStates[k].owner == -1) {
-                        cur_rs.Fu = k;
-                        this->fuStates[k].owner = rst;
-                        this->fuStates[k].cycle_todo = 4;
-                        this->fuStates[k].lineIndex = l;
-                        break;
-                    }
-                }
+                cur_rs.Inqueue = true;
+                A_FU_q.push(rst);
             }
         } else if (cur_l.cmd == 'M' || cur_l.cmd == 'D') {
             if (cur_rs.Qj == -1 && cur_rs.Qk == -1) { // Operands is ready
-                for (int k = 3; k < 5; ++k) {
-                    if (this->fuStates[k].owner == -1) {
-                        cur_rs.Fu = k;
-                        this->fuStates[k].owner = rst;
-                        this->fuStates[k].cycle_todo = 5;
-                        if (cur_l.cmd == 'D' && cur_rs.Vk == 0) this->fuStates[k].cycle_todo = 2;
-                        this->fuStates[k].lineIndex = l;
-                        break;
-                    }
-                }
+                cur_rs.Inqueue = true;
+                M_FU_q.push(rst);
             }
         } else if (cur_l.cmd == 'L') {
-            for (int k = 5; k < 7; ++k) {
-                if (this->fuStates[k].owner == -1) {
-                    cur_rs.Fu = k;
-                    this->fuStates[k].owner = rst;
-                    this->fuStates[k].cycle_todo = 4;
-                    this->fuStates[k].lineIndex = l;
-                    break;
-                }
-            }
+            cur_rs.Inqueue = true;
+            L_FU_q.push(rst);            
         } else if (cur_l.cmd == 'J') {
             if (cur_rs.Qj == -1) { // Operands is ready
-                for (int k = 0; k < 3; ++k) {
-                    if (this->fuStates[k].owner == -1) {
-                        cur_rs.Fu = k;
-                        this->fuStates[k].owner = rst;
-                        this->fuStates[k].cycle_todo = 2;
-                        this->fuStates[k].lineIndex = l;
-                        break;
-                    }
-                }
+                cur_rs.Inqueue = true;
+                A_FU_q.push(rst);   
             }
         } else {
             printf("Invalid command type when grab FU in line %d\n", l);
             exit(-1);
         }
+    }
+}
+
+void TMSLSimulator::dequeFU() {
+    // deque
+    for (int k = 0; k < 3; ++k) {
+        if (this->fuStates[k].owner == -1) {
+            int crst = 0;
+            if (!A_FU_q.empty()) {
+                crst = A_FU_q.front();
+                A_FU_q.pop();
+            } else break;
+            ReserveStation& cur_rs = this->rStations[crst];
+            cur_rs.Fu = k;
+            cur_rs.Inqueue = false;
+            this->fuStates[k].owner = crst;
+            this->fuStates[k].cycle_todo = 4;
+            if (cur_rs.Op == 'J') this->fuStates[k].cycle_todo = 2;
+            this->fuStates[k].lineIndex = cur_rs.LineNum;
+        }
     } 
+
+    for (int k = 3; k < 5; ++k) {
+        if (this->fuStates[k].owner == -1) {
+            int crst = 0;
+            if (!M_FU_q.empty()) {
+                crst = M_FU_q.front();
+                M_FU_q.pop();
+            } else break;
+            ReserveStation& cur_rs = this->rStations[crst];
+            cur_rs.Fu = k;
+            cur_rs.Inqueue = false;
+            this->fuStates[k].owner = crst;
+            this->fuStates[k].cycle_todo = 5;
+            if (cur_rs.Op == 'D' && cur_rs.Vk == 0) this->fuStates[k].cycle_todo = 2;
+            this->fuStates[k].lineIndex = cur_rs.LineNum;
+        }
+    }
+
+    for (int k = 5; k < 7; ++k) {
+        if (this->fuStates[k].owner == -1) {
+            int crst = 0;
+            if (!L_FU_q.empty()) {
+                crst = L_FU_q.front();
+                L_FU_q.pop();
+            } else break;
+            ReserveStation& cur_rs = this->rStations[crst];
+            cur_rs.Fu = k;
+            cur_rs.Inqueue = false;
+            this->fuStates[k].owner = crst;
+            this->fuStates[k].cycle_todo = 4;
+            this->fuStates[k].lineIndex = cur_rs.LineNum;
+        }
+    }
 }
 
 void TMSLSimulator::doFU(int clock) {
@@ -345,13 +396,17 @@ void TMSLSimulator::doFU(int clock) {
                     cur_fu.result = cur_l.op[0];
                     break;
                 case 'J':
+                    if (cur_l.op[0] == this->rStations[cur_fu.owner].Vj) cur_fu.result = 1;
+                    else cur_fu.result = 2;
                     break;
                 default:
                     printf("Unrecognized command when doFU in line %d!\n", cur_fu.lineIndex);
                     exit(-1);
                     break;
             }
-            lineRecords[cur_fu.lineIndex][1] = clock;
+            if (!recordsWritten[cur_fu.lineIndex]) {
+                lineRecords[cur_fu.lineIndex][1] = clock;
+            }
         }
     }
 }
@@ -361,7 +416,10 @@ void TMSLSimulator::doCollect(int clock) {
         FUState& cur_fu = this->fuStates[i];
         if (cur_fu.owner != -1 && cur_fu.cycle_todo == 0) {
             // write records
-            lineRecords[cur_fu.lineIndex][2] = clock;
+            if (!recordsWritten[cur_fu.lineIndex]) {
+                lineRecords[cur_fu.lineIndex][2] = clock;
+                recordsWritten[cur_fu.lineIndex] = true;
+            }
             // broadcast result
             for (int k = 0; k < 12; ++k) {
                 if (this->rStations[k].Qj == cur_fu.owner) {
@@ -379,6 +437,22 @@ void TMSLSimulator::doCollect(int clock) {
                     this->registers[k].stat = -1;
                 }
             }
+
+            if (lines[cur_fu.lineIndex].cmd == 'J') {
+                // if is Jump inst
+                hasJump = false;
+                if (cur_fu.result == 1) {
+                    // Jump success
+                    cur_line_to_launch += (-1 + lines[cur_fu.lineIndex].op[1]);
+                } else if (cur_fu.result == 2) {
+                    // Jump fail
+                    // did nothing
+                } else {
+                    printf("Unexpected Jump inst reult: %d\n", cur_fu.result);
+                    exit(-1);
+                }
+            }
+
             // reclaim resources
             this->rStations[cur_fu.owner].Busy = false;
             if (cur_fu.owner < 6) rstation_busy_num[0]--;
@@ -410,18 +484,18 @@ void TMSLSimulator::writeRecords() {
 
 void TMSLSimulator::printState(int clock) {
     fprintf(this->logFile, "clock %d\n", clock);
-    fprintf(this->logFile, ",Busy,Op,Vj,Vk,Qj,Qk\n");
+    fprintf(this->logFile, ",Busy,Op,Vj,Vk,Qj,Qk,FU,Line\n");
     for (int i = 0; i < 6; ++i) {
-        if (this->rStations[i].Busy) fprintf(this->logFile, "Ars%d,yes,%c,0x%x,0x%x,%d,%d\n", i, 
-            this->rStations[i].Op, this->rStations[i].Vj, this->rStations[i].Vk, this->rStations[i].Qj, this->rStations[i].Qk);
-        else fprintf(this->logFile, "Ars%d,no,%c,0x%x,0x%x,%d,%d\n", i,
-            this->rStations[i].Op, this->rStations[i].Vj, this->rStations[i].Vk, this->rStations[i].Qj, this->rStations[i].Qk);
+        if (this->rStations[i].Busy) fprintf(this->logFile, "Ars%d,yes,%c,0x%x,0x%x,%d,%d,%d,%d\n", i, 
+            this->rStations[i].Op, this->rStations[i].Vj, this->rStations[i].Vk, this->rStations[i].Qj, this->rStations[i].Qk, this->rStations[i].Fu, this->rStations[i].LineNum);
+        else fprintf(this->logFile, "Ars%d,no,%c,0x%x,0x%x,%d,%d,%d,%d\n", i,
+            this->rStations[i].Op, this->rStations[i].Vj, this->rStations[i].Vk, this->rStations[i].Qj, this->rStations[i].Qk, this->rStations[i].Fu, this->rStations[i].LineNum);
     }
     for (int i = 6; i < 9; ++i) {
-        if (this->rStations[i].Busy) fprintf(this->logFile, "Mrs%d,yes,%c,0x%x,0x%x,%d,%d\n", i-6,
-            this->rStations[i].Op, this->rStations[i].Vj, this->rStations[i].Vk, this->rStations[i].Qj, this->rStations[i].Qk);
-        else fprintf(this->logFile, "Mrs%d,no,%c,0x%x,0x%x,%d,%d\n", i-6,
-            this->rStations[i].Op, this->rStations[i].Vj, this->rStations[i].Vk, this->rStations[i].Qj, this->rStations[i].Qk);
+        if (this->rStations[i].Busy) fprintf(this->logFile, "Mrs%d,yes,%c,0x%x,0x%x,%d,%d,%d,%d\n", i-6,
+            this->rStations[i].Op, this->rStations[i].Vj, this->rStations[i].Vk, this->rStations[i].Qj, this->rStations[i].Qk, this->rStations[i].Fu, this->rStations[i].LineNum);
+        else fprintf(this->logFile, "Mrs%d,no,%c,0x%x,0x%x,%d,%d,%d,%d\n", i-6,
+            this->rStations[i].Op, this->rStations[i].Vj, this->rStations[i].Vk, this->rStations[i].Qj, this->rStations[i].Qk, this->rStations[i].Fu, this->rStations[i].LineNum);
     }
     fprintf(this->logFile, "\n");
     fprintf(this->logFile, ",Busy,Address\n");   
@@ -431,27 +505,27 @@ void TMSLSimulator::printState(int clock) {
     }
     fprintf(this->logFile, "\n");
 
-    for (int i = 1; i <= 32; ++i) fprintf(this->logFile, "R%d,", i);
+    for (int i = 0; i <= 32; ++i) fprintf(this->logFile, "R%d,", i);
     fprintf(this->logFile, "\n");
-    for (int i = 1; i <= 32; ++i) fprintf(this->logFile, "%d,", this->registers[i].stat);
+    for (int i = 0; i <= 32; ++i) fprintf(this->logFile, "%d,", this->registers[i].stat);
     fprintf(this->logFile, "\n");
-    for (int i = 1; i <= 32; ++i) fprintf(this->logFile, "0x%x,", this->registers[i].value);
+    for (int i = 0; i <= 32; ++i) fprintf(this->logFile, "0x%x,", this->registers[i].value);
     fprintf(this->logFile, "\n");
 
-    fprintf(this->logFile, ",Current Line,Operation,Cycle Remained\n");
+    fprintf(this->logFile, ",Current Line,Operation,Cycle Remained,RStation\n");
     for (int i = 0; i < 3; ++i) {
-        fprintf(this->logFile, "Add%d,%d,%c,%d\n", 
-            i, this->fuStates[i].lineIndex, lines[this->fuStates[i].lineIndex].cmd, this->fuStates[i].cycle_todo);
+        fprintf(this->logFile, "Add%d,%d,%c,%d,%d\n", 
+            i, this->fuStates[i].lineIndex, lines[this->fuStates[i].lineIndex].cmd, this->fuStates[i].cycle_todo, this->fuStates[i].owner);
     }
 
     for (int i = 3; i < 5; ++i) {
-        fprintf(this->logFile, "Mult%d,%d,%c,%d\n", 
-            i, this->fuStates[i].lineIndex, lines[this->fuStates[i].lineIndex].cmd, this->fuStates[i].cycle_todo);
+        fprintf(this->logFile, "Mult%d,%d,%c,%d,%d\n", 
+            i, this->fuStates[i].lineIndex, lines[this->fuStates[i].lineIndex].cmd, this->fuStates[i].cycle_todo, this->fuStates[i].owner);
     } 
 
     for (int i = 5; i < 7; ++i) {
-        fprintf(this->logFile, "Load%d,%d,%c,%d\n", 
-            i, this->fuStates[i].lineIndex, lines[this->fuStates[i].lineIndex].cmd, this->fuStates[i].cycle_todo);
+        fprintf(this->logFile, "Load%d,%d,%c,%d,%d\n", 
+            i, this->fuStates[i].lineIndex, lines[this->fuStates[i].lineIndex].cmd, this->fuStates[i].cycle_todo, this->fuStates[i].owner);
     } 
 
     fprintf(this->logFile, "\n");
@@ -461,6 +535,13 @@ void TMSLSimulator::printState(int clock) {
     //     fprintf(this->logFile, "%d,%d\n",(*it).line_index, (*it).rs_index);
     // }
     // fprintf(this->logFile, "\n");
+
+    fprintf(this->logFile, "window\n");
+    if (!A_FU_q.empty()) fprintf(this->logFile, "A %d\n", A_FU_q.front());
+    if (!M_FU_q.empty()) fprintf(this->logFile, "M %d\n", M_FU_q.front());
+    if (!L_FU_q.empty()) fprintf(this->logFile, "L %d\n", L_FU_q.front());
+
+    fprintf(this->logFile, "\n");    
 
     fflush(this->logFile);
 }

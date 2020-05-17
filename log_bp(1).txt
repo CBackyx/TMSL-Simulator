@@ -1,0 +1,2260 @@
+parse done, insts.len = 34
+---------------log start---cycle: 1--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	No  	none	       0	       0	    	    
+	Ars1:	No  	none	       0	       0	    	    
+	Ars2:	No  	none	       0	       0	    	    
+	Ars3:	No  	none	       0	       0	    	    
+	Ars4:	No  	none	       0	       0	    	    
+	Ars5:	No  	none	       0	       0	    	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	 Yes	       2
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/LB0	(R2)0	(R3)0	(R4)0	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 1
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Add0:
+	Add1:
+	Add2:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 1):
+			RS  	LeftCycle
+	Load0:	 LB0	3
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 2--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	No  	none	       0	       0	    	    
+	Ars1:	No  	none	       0	       0	    	    
+	Ars2:	No  	none	       0	       0	    	    
+	Ars3:	No  	none	       0	       0	    	    
+	Ars4:	No  	none	       0	       0	    	    
+	Ars5:	No  	none	       0	       0	    	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	 Yes	       2
+	LB1:	 Yes	       1
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/LB0	(R2)0/LB1	(R3)0	(R4)0	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 2
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Add0:
+	Add1:
+	Add2:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 2):
+			RS  	LeftCycle
+	Load0:	 LB0	2
+	Load1:	 LB1	3
+---------------log done---------------------------
+---------------log start---cycle: 3--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	No  	none	       0	       0	    	    
+	Ars1:	No  	none	       0	       0	    	    
+	Ars2:	No  	none	       0	       0	    	    
+	Ars3:	No  	none	       0	       0	    	    
+	Ars4:	No  	none	       0	       0	    	    
+	Ars5:	No  	none	       0	       0	    	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	 Yes	       2
+	LB1:	 Yes	       1
+	LB2:	 Yes	       3
+Regs:
+	(R0)0	(R1)0/LB0	(R2)0/LB1	(R3)0/LB2	(R4)0	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 3
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Add0:
+	Add1:
+	Add2:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 2):
+			RS  	LeftCycle
+	Load0:	 LB0	1
+	Load1:	 LB1	2
+---------------log done---------------------------
+---------------log start---cycle: 4--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       ?	       ?	 LB1	 LB2
+	Ars1:	No  	none	       0	       0	    	    
+	Ars2:	No  	none	       0	       0	    	    
+	Ars3:	No  	none	       0	       0	    	    
+	Ars4:	No  	none	       0	       0	    	    
+	Ars5:	No  	none	       0	       0	    	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	 Yes	       2
+	LB1:	 Yes	       1
+	LB2:	 Yes	       3
+Regs:
+	(R0)0	(R1)0/Ars0	(R2)0/LB1	(R3)0/LB2	(R4)0	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 4
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Add0:
+	Add1:
+	Add2:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 2):
+			RS  	LeftCycle
+	Load0:	 LB0	0
+	Load1:	 LB1	1
+---------------log done---------------------------
+---------------log start---cycle: 5--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       ?	       ?	 LB1	 LB2
+	Ars1:	Yes 	 sub	       0	       0	    	    
+	Ars2:	No  	none	       0	       0	    	    
+	Ars3:	No  	none	       0	       0	    	    
+	Ars4:	No  	none	       0	       0	    	    
+	Ars5:	No  	none	       0	       0	    	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	 Yes	       1
+	LB2:	 Yes	       3
+Regs:
+	(R0)0	(R1)0/Ars1	(R2)0/LB1	(R3)0/LB2	(R4)0	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 5
+Functinal Units(working: 1):
+			RS  	LeftCycle
+	Add0:	Ars1	3
+	Add1:
+	Add2:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 2):
+			RS  	LeftCycle
+	Load0:	 LB2	3
+	Load1:	 LB1	0
+---------------log done---------------------------
+---------------log start---cycle: 6--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       1	       ?	    	 LB2
+	Ars1:	Yes 	 sub	       0	       0	    	    
+	Ars2:	Yes 	 add	       ?	       0	Ars1	    
+	Ars3:	No  	none	       0	       0	    	    
+	Ars4:	No  	none	       0	       0	    	    
+	Ars5:	No  	none	       0	       0	    	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	 Yes	       3
+Regs:
+	(R0)0	(R1)0/Ars1	(R2)1	(R3)0/LB2	(R4)0/Ars2	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 6
+Functinal Units(working: 1):
+			RS  	LeftCycle
+	Add0:	Ars1	2
+	Add1:
+	Add2:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 1):
+			RS  	LeftCycle
+	Load0:	 LB2	2
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 7--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       1	       ?	    	 LB2
+	Ars1:	Yes 	 sub	       0	       0	    	    
+	Ars2:	Yes 	 add	       ?	       0	Ars1	    
+	Ars3:	Yes 	 add	       ?	       ?	Ars2	 LB2
+	Ars4:	No  	none	       0	       0	    	    
+	Ars5:	No  	none	       0	       0	    	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	 Yes	       3
+Regs:
+	(R0)0	(R1)0/Ars1	(R2)1	(R3)0/Ars3	(R4)0/Ars2	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 7
+Functinal Units(working: 1):
+			RS  	LeftCycle
+	Add0:	Ars1	1
+	Add1:
+	Add2:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 1):
+			RS  	LeftCycle
+	Load0:	 LB2	1
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 8--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       1	       ?	    	 LB2
+	Ars1:	Yes 	 sub	       0	       0	    	    
+	Ars2:	Yes 	 add	       ?	       0	Ars1	    
+	Ars3:	Yes 	 add	       ?	       ?	Ars2	 LB2
+	Ars4:	Yes 	 add	       0	       0	    	    
+	Ars5:	No  	none	       0	       0	    	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	 Yes	       3
+Regs:
+	(R0)0	(R1)0/Ars1	(R2)1	(R3)0/Ars4	(R4)0/Ars2	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 8
+Functinal Units(working: 2):
+			RS  	LeftCycle
+	Add0:	Ars1	0
+	Add1:	Ars4	3
+	Add2:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 1):
+			RS  	LeftCycle
+	Load0:	 LB2	0
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 9--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       1	       3	    	    
+	Ars1:	Yes 	 add	       1	       ?	    	Ars4
+	Ars2:	Yes 	 add	       0	       0	    	    
+	Ars3:	Yes 	 add	       ?	       3	Ars2	    
+	Ars4:	Yes 	 add	       0	       0	    	    
+	Ars5:	No  	none	       0	       0	    	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/Ars1	(R2)1	(R3)0/Ars4	(R4)0/Ars2	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 9
+Functinal Units(working: 3):
+			RS  	LeftCycle
+	Add0:	Ars2	3
+	Add1:	Ars4	2
+	Add2:	Ars0	3
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 10--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       1	       3	    	    
+	Ars1:	Yes 	 add	       1	       ?	    	Ars4
+	Ars2:	Yes 	 add	       0	       0	    	    
+	Ars3:	Yes 	 add	       ?	       3	Ars2	    
+	Ars4:	Yes 	 add	       0	       0	    	    
+	Ars5:	Yes 	 sub	       ?	       0	Ars2	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/Ars5	(R2)1	(R3)0/Ars4	(R4)0/Ars2	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): a
+Functinal Units(working: 3):
+			RS  	LeftCycle
+	Add0:	Ars2	2
+	Add1:	Ars4	1
+	Add2:	Ars0	2
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 11--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       1	       3	    	    
+	Ars1:	Yes 	 add	       1	       ?	    	Ars4
+	Ars2:	Yes 	 add	       0	       0	    	    
+	Ars3:	Yes 	 add	       ?	       3	Ars2	    
+	Ars4:	Yes 	 add	       0	       0	    	    
+	Ars5:	Yes 	 sub	       ?	       0	Ars2	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/Ars5	(R2)1	(R3)0/Ars4	(R4)0/Ars2	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): a
+Functinal Units(working: 3):
+			RS  	LeftCycle
+	Add0:	Ars2	1
+	Add1:	Ars4	0
+	Add2:	Ars0	1
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 12--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       1	       3	    	    
+	Ars1:	Yes 	 add	       1	       0	    	    
+	Ars2:	Yes 	 add	       0	       0	    	    
+	Ars3:	Yes 	 add	       ?	       3	Ars2	    
+	Ars4:	Yes 	 add	       ?	       0	Ars5	    
+	Ars5:	Yes 	 sub	       ?	       0	Ars2	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/Ars5	(R2)1	(R3)0	(R4)0/Ars4	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): b
+Functinal Units(working: 3):
+			RS  	LeftCycle
+	Add0:	Ars2	0
+	Add1:	Ars1	3
+	Add2:	Ars0	0
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 13--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       ?	       0	Ars4	    
+	Ars1:	Yes 	 add	       1	       0	    	    
+	Ars2:	No  	none	       0	       0	    	    
+	Ars3:	Yes 	 add	       0	       3	    	    
+	Ars4:	Yes 	 add	       ?	       0	Ars5	    
+	Ars5:	Yes 	 sub	       0	       0	    	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/Ars5	(R2)1	(R3)0/Ars0	(R4)0/Ars4	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): c
+Functinal Units(working: 3):
+			RS  	LeftCycle
+	Add0:	Ars5	3
+	Add1:	Ars1	2
+	Add2:	Ars3	3
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 14--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       ?	       0	Ars4	    
+	Ars1:	Yes 	 add	       1	       0	    	    
+	Ars2:	Yes 	 add	       0	       0	    	    
+	Ars3:	Yes 	 add	       0	       3	    	    
+	Ars4:	Yes 	 add	       ?	       0	Ars5	    
+	Ars5:	Yes 	 sub	       0	       0	    	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/Ars5	(R2)1	(R3)0/Ars2	(R4)0/Ars4	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): d
+Functinal Units(working: 3):
+			RS  	LeftCycle
+	Add0:	Ars5	2
+	Add1:	Ars1	1
+	Add2:	Ars3	2
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 15--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       ?	       0	Ars4	    
+	Ars1:	Yes 	 add	       1	       0	    	    
+	Ars2:	Yes 	 add	       0	       0	    	    
+	Ars3:	Yes 	 add	       0	       3	    	    
+	Ars4:	Yes 	 add	       ?	       0	Ars5	    
+	Ars5:	Yes 	 sub	       0	       0	    	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/Ars5	(R2)1	(R3)0/Ars2	(R4)0/Ars4	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): d
+Functinal Units(working: 3):
+			RS  	LeftCycle
+	Add0:	Ars5	1
+	Add1:	Ars1	0
+	Add2:	Ars3	1
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 16--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       ?	       0	Ars4	    
+	Ars1:	Yes 	 add	       1	       ?	    	Ars2
+	Ars2:	Yes 	 add	       0	       0	    	    
+	Ars3:	Yes 	 add	       0	       3	    	    
+	Ars4:	Yes 	 add	       ?	       0	Ars5	    
+	Ars5:	Yes 	 sub	       0	       0	    	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/Ars1	(R2)1	(R3)0/Ars2	(R4)0/Ars4	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): e
+Functinal Units(working: 3):
+			RS  	LeftCycle
+	Add0:	Ars5	0
+	Add1:	Ars2	3
+	Add2:	Ars3	0
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 17--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       ?	       0	Ars4	    
+	Ars1:	Yes 	 add	       1	       ?	    	Ars2
+	Ars2:	Yes 	 add	       0	       0	    	    
+	Ars3:	Yes 	 sub	       ?	       0	Ars4	    
+	Ars4:	Yes 	 add	       0	       0	    	    
+	Ars5:	No  	none	       0	       0	    	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/Ars3	(R2)1	(R3)0/Ars2	(R4)0/Ars4	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): f
+Functinal Units(working: 2):
+			RS  	LeftCycle
+	Add0:	Ars4	3
+	Add1:	Ars2	2
+	Add2:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 18--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       ?	       0	Ars4	    
+	Ars1:	Yes 	 add	       1	       ?	    	Ars2
+	Ars2:	Yes 	 add	       0	       0	    	    
+	Ars3:	Yes 	 sub	       ?	       0	Ars4	    
+	Ars4:	Yes 	 add	       0	       0	    	    
+	Ars5:	Yes 	 add	       ?	       0	Ars3	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/Ars3	(R2)1	(R3)0/Ars2	(R4)0/Ars5	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 10
+Functinal Units(working: 2):
+			RS  	LeftCycle
+	Add0:	Ars4	2
+	Add1:	Ars2	1
+	Add2:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 19--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       ?	       0	Ars4	    
+	Ars1:	Yes 	 add	       1	       ?	    	Ars2
+	Ars2:	Yes 	 add	       0	       0	    	    
+	Ars3:	Yes 	 sub	       ?	       0	Ars4	    
+	Ars4:	Yes 	 add	       0	       0	    	    
+	Ars5:	Yes 	 add	       ?	       0	Ars3	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/Ars3	(R2)1	(R3)0/Ars2	(R4)0/Ars5	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 10
+Functinal Units(working: 2):
+			RS  	LeftCycle
+	Add0:	Ars4	1
+	Add1:	Ars2	0
+	Add2:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 20--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       ?	       0	Ars4	    
+	Ars1:	Yes 	 add	       1	       0	    	    
+	Ars2:	Yes 	 add	       ?	       0	Ars5	    
+	Ars3:	Yes 	 sub	       ?	       0	Ars4	    
+	Ars4:	Yes 	 add	       0	       0	    	    
+	Ars5:	Yes 	 add	       ?	       0	Ars3	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/Ars3	(R2)1	(R3)0/Ars2	(R4)0/Ars5	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 11
+Functinal Units(working: 2):
+			RS  	LeftCycle
+	Add0:	Ars4	0
+	Add1:	Ars1	3
+	Add2:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 21--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       0	       0	    	    
+	Ars1:	Yes 	 add	       1	       0	    	    
+	Ars2:	Yes 	 add	       ?	       0	Ars5	    
+	Ars3:	Yes 	 sub	       0	       0	    	    
+	Ars4:	Yes 	 add	       0	       0	    	    
+	Ars5:	Yes 	 add	       ?	       0	Ars3	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/Ars3	(R2)1	(R3)0/Ars4	(R4)0/Ars5	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 12
+Functinal Units(working: 3):
+			RS  	LeftCycle
+	Add0:	Ars4	3
+	Add1:	Ars1	2
+	Add2:	Ars3	3
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 22--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       0	       0	    	    
+	Ars1:	Yes 	 add	       1	       0	    	    
+	Ars2:	Yes 	 add	       ?	       0	Ars5	    
+	Ars3:	Yes 	 sub	       0	       0	    	    
+	Ars4:	Yes 	 add	       0	       0	    	    
+	Ars5:	Yes 	 add	       ?	       0	Ars3	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/Ars3	(R2)1	(R3)0/Ars4	(R4)0/Ars5	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 12
+Functinal Units(working: 3):
+			RS  	LeftCycle
+	Add0:	Ars4	2
+	Add1:	Ars1	1
+	Add2:	Ars3	2
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 23--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       0	       0	    	    
+	Ars1:	Yes 	 add	       1	       0	    	    
+	Ars2:	Yes 	 add	       ?	       0	Ars5	    
+	Ars3:	Yes 	 sub	       0	       0	    	    
+	Ars4:	Yes 	 add	       0	       0	    	    
+	Ars5:	Yes 	 add	       ?	       0	Ars3	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/Ars3	(R2)1	(R3)0/Ars4	(R4)0/Ars5	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 12
+Functinal Units(working: 3):
+			RS  	LeftCycle
+	Add0:	Ars4	1
+	Add1:	Ars1	0
+	Add2:	Ars3	1
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 24--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       0	       0	    	    
+	Ars1:	Yes 	 add	       1	       ?	    	Ars4
+	Ars2:	Yes 	 add	       ?	       0	Ars5	    
+	Ars3:	Yes 	 sub	       0	       0	    	    
+	Ars4:	Yes 	 add	       0	       0	    	    
+	Ars5:	Yes 	 add	       ?	       0	Ars3	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/Ars1	(R2)1	(R3)0/Ars4	(R4)0/Ars5	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 13
+Functinal Units(working: 3):
+			RS  	LeftCycle
+	Add0:	Ars4	0
+	Add1:	Ars0	3
+	Add2:	Ars3	0
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 25--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       0	       0	    	    
+	Ars1:	Yes 	 add	       1	       0	    	    
+	Ars2:	Yes 	 add	       ?	       0	Ars5	    
+	Ars3:	Yes 	 sub	       ?	       0	Ars5	    
+	Ars4:	No  	none	       0	       0	    	    
+	Ars5:	Yes 	 add	       0	       0	    	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/Ars3	(R2)1	(R3)0	(R4)0/Ars5	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 14
+Functinal Units(working: 3):
+			RS  	LeftCycle
+	Add0:	Ars5	3
+	Add1:	Ars0	2
+	Add2:	Ars1	3
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 26--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       0	       0	    	    
+	Ars1:	Yes 	 add	       1	       0	    	    
+	Ars2:	Yes 	 add	       ?	       0	Ars5	    
+	Ars3:	Yes 	 sub	       ?	       0	Ars5	    
+	Ars4:	Yes 	 add	       ?	       0	Ars3	    
+	Ars5:	Yes 	 add	       0	       0	    	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/Ars3	(R2)1	(R3)0	(R4)0/Ars4	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 15
+Functinal Units(working: 3):
+			RS  	LeftCycle
+	Add0:	Ars5	2
+	Add1:	Ars0	1
+	Add2:	Ars1	2
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 27--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       0	       0	    	    
+	Ars1:	Yes 	 add	       1	       0	    	    
+	Ars2:	Yes 	 add	       ?	       0	Ars5	    
+	Ars3:	Yes 	 sub	       ?	       0	Ars5	    
+	Ars4:	Yes 	 add	       ?	       0	Ars3	    
+	Ars5:	Yes 	 add	       0	       0	    	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/Ars3	(R2)1	(R3)0	(R4)0/Ars4	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 15
+Functinal Units(working: 3):
+			RS  	LeftCycle
+	Add0:	Ars5	1
+	Add1:	Ars0	0
+	Add2:	Ars1	1
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 28--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       ?	       0	Ars4	    
+	Ars1:	Yes 	 add	       1	       0	    	    
+	Ars2:	Yes 	 add	       ?	       0	Ars5	    
+	Ars3:	Yes 	 sub	       ?	       0	Ars5	    
+	Ars4:	Yes 	 add	       ?	       0	Ars3	    
+	Ars5:	Yes 	 add	       0	       0	    	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/Ars3	(R2)1	(R3)0/Ars0	(R4)0/Ars4	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 16
+Functinal Units(working: 2):
+			RS  	LeftCycle
+	Add0:	Ars5	0
+	Add1:
+	Add2:	Ars1	0
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 29--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       ?	       0	Ars4	    
+	Ars1:	Yes 	 add	       0	       0	    	    
+	Ars2:	Yes 	 add	       0	       0	    	    
+	Ars3:	Yes 	 sub	       0	       0	    	    
+	Ars4:	Yes 	 add	       ?	       0	Ars3	    
+	Ars5:	No  	none	       0	       0	    	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/Ars3	(R2)1	(R3)0/Ars1	(R4)0/Ars4	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 17
+Functinal Units(working: 3):
+			RS  	LeftCycle
+	Add0:	Ars3	3
+	Add1:	Ars2	3
+	Add2:	Ars1	3
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 30--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       ?	       0	Ars4	    
+	Ars1:	Yes 	 add	       0	       0	    	    
+	Ars2:	Yes 	 add	       0	       0	    	    
+	Ars3:	Yes 	 sub	       0	       0	    	    
+	Ars4:	Yes 	 add	       ?	       0	Ars3	    
+	Ars5:	Yes 	 add	       ?	       0	Ars3	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/Ars3	(R2)1	(R3)0/Ars1	(R4)0/Ars5	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 18
+Functinal Units(working: 3):
+			RS  	LeftCycle
+	Add0:	Ars3	2
+	Add1:	Ars2	2
+	Add2:	Ars1	2
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 31--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       ?	       0	Ars4	    
+	Ars1:	Yes 	 add	       0	       0	    	    
+	Ars2:	Yes 	 add	       0	       0	    	    
+	Ars3:	Yes 	 sub	       0	       0	    	    
+	Ars4:	Yes 	 add	       ?	       0	Ars3	    
+	Ars5:	Yes 	 add	       ?	       0	Ars3	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/Ars3	(R2)1	(R3)0/Ars1	(R4)0/Ars5	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 18
+Functinal Units(working: 3):
+			RS  	LeftCycle
+	Add0:	Ars3	1
+	Add1:	Ars2	1
+	Add2:	Ars1	1
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 32--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       ?	       0	Ars4	    
+	Ars1:	Yes 	 add	       0	       0	    	    
+	Ars2:	Yes 	 add	       0	       0	    	    
+	Ars3:	Yes 	 sub	       0	       0	    	    
+	Ars4:	Yes 	 add	       ?	       0	Ars3	    
+	Ars5:	Yes 	 add	       ?	       0	Ars3	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/Ars3	(R2)1	(R3)0/Ars1	(R4)0/Ars5	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 18
+Functinal Units(working: 3):
+			RS  	LeftCycle
+	Add0:	Ars3	0
+	Add1:	Ars2	0
+	Add2:	Ars1	0
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 33--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       ?	       0	Ars4	    
+	Ars1:	Yes 	 add	       ?	       0	Ars5	    
+	Ars2:	No  	none	       0	       0	    	    
+	Ars3:	No  	none	       0	       0	    	    
+	Ars4:	Yes 	 add	       0	       0	    	    
+	Ars5:	Yes 	 add	       0	       0	    	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0	(R2)1	(R3)0/Ars1	(R4)0/Ars5	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 19
+Functinal Units(working: 2):
+			RS  	LeftCycle
+	Add0:	Ars5	3
+	Add1:	Ars4	3
+	Add2:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 34--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       ?	       0	Ars4	    
+	Ars1:	Yes 	 add	       ?	       0	Ars5	    
+	Ars2:	Yes 	 add	       0	       0	    	    
+	Ars3:	No  	none	       0	       0	    	    
+	Ars4:	Yes 	 add	       0	       0	    	    
+	Ars5:	Yes 	 add	       0	       0	    	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0	(R2)1	(R3)0/Ars2	(R4)0/Ars5	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 1a
+Functinal Units(working: 3):
+			RS  	LeftCycle
+	Add0:	Ars5	2
+	Add1:	Ars4	2
+	Add2:	Ars2	3
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 35--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       ?	       0	Ars4	    
+	Ars1:	Yes 	 add	       ?	       0	Ars5	    
+	Ars2:	Yes 	 add	       0	       0	    	    
+	Ars3:	Yes 	 add	       1	       ?	    	Ars2
+	Ars4:	Yes 	 add	       0	       0	    	    
+	Ars5:	Yes 	 add	       0	       0	    	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/Ars3	(R2)1	(R3)0/Ars2	(R4)0/Ars5	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 1b
+Functinal Units(working: 3):
+			RS  	LeftCycle
+	Add0:	Ars5	1
+	Add1:	Ars4	1
+	Add2:	Ars2	2
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 36--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       ?	       0	Ars4	    
+	Ars1:	Yes 	 add	       ?	       0	Ars5	    
+	Ars2:	Yes 	 add	       0	       0	    	    
+	Ars3:	Yes 	 add	       1	       ?	    	Ars2
+	Ars4:	Yes 	 add	       0	       0	    	    
+	Ars5:	Yes 	 add	       0	       0	    	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/Ars3	(R2)1	(R3)0/Ars2	(R4)0/Ars5	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 1b
+Functinal Units(working: 3):
+			RS  	LeftCycle
+	Add0:	Ars5	0
+	Add1:	Ars4	0
+	Add2:	Ars2	1
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 37--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       0	       0	    	    
+	Ars1:	Yes 	 add	       0	       0	    	    
+	Ars2:	Yes 	 add	       0	       0	    	    
+	Ars3:	Yes 	 add	       1	       ?	    	Ars2
+	Ars4:	Yes 	 sub	       0	       0	    	    
+	Ars5:	No  	none	       0	       0	    	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/Ars4	(R2)1	(R3)0/Ars2	(R4)0	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 1c
+Functinal Units(working: 3):
+			RS  	LeftCycle
+	Add0:	Ars4	3
+	Add1:	Ars1	3
+	Add2:	Ars2	0
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 38--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       0	       0	    	    
+	Ars1:	Yes 	 add	       0	       0	    	    
+	Ars2:	Yes 	 add	       ?	       0	Ars4	    
+	Ars3:	Yes 	 add	       1	       0	    	    
+	Ars4:	Yes 	 sub	       0	       0	    	    
+	Ars5:	No  	none	       0	       0	    	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/Ars4	(R2)1	(R3)0	(R4)0/Ars2	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 1d
+Functinal Units(working: 3):
+			RS  	LeftCycle
+	Add0:	Ars4	2
+	Add1:	Ars1	2
+	Add2:	Ars3	3
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 39--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       0	       0	    	    
+	Ars1:	Yes 	 add	       0	       0	    	    
+	Ars2:	Yes 	 add	       ?	       0	Ars4	    
+	Ars3:	Yes 	 add	       1	       0	    	    
+	Ars4:	Yes 	 sub	       0	       0	    	    
+	Ars5:	Yes 	 sub	       ?	       0	Ars2	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/Ars5	(R2)1	(R3)0	(R4)0/Ars2	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 1e
+Functinal Units(working: 3):
+			RS  	LeftCycle
+	Add0:	Ars4	1
+	Add1:	Ars1	1
+	Add2:	Ars3	2
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 40--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       0	       0	    	    
+	Ars1:	Yes 	 add	       0	       0	    	    
+	Ars2:	Yes 	 add	       ?	       0	Ars4	    
+	Ars3:	Yes 	 add	       1	       0	    	    
+	Ars4:	Yes 	 sub	       0	       0	    	    
+	Ars5:	Yes 	 sub	       ?	       0	Ars2	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/Ars5	(R2)1	(R3)0	(R4)0/Ars2	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 1e
+Functinal Units(working: 3):
+			RS  	LeftCycle
+	Add0:	Ars4	0
+	Add1:	Ars1	0
+	Add2:	Ars3	1
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 41--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       0	       0	    	    
+	Ars1:	Yes 	 add	       ?	       0	Ars5	    
+	Ars2:	Yes 	 add	       0	       0	    	    
+	Ars3:	Yes 	 add	       1	       0	    	    
+	Ars4:	No  	none	       0	       0	    	    
+	Ars5:	Yes 	 sub	       ?	       0	Ars2	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/Ars5	(R2)1	(R3)0	(R4)0/Ars1	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 1f
+Functinal Units(working: 3):
+			RS  	LeftCycle
+	Add0:	Ars2	3
+	Add1:	Ars0	3
+	Add2:	Ars3	0
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 42--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       0	       0	    	    
+	Ars1:	Yes 	 add	       ?	       0	Ars5	    
+	Ars2:	Yes 	 add	       0	       0	    	    
+	Ars3:	Yes 	 add	       ?	       0	Ars1	    
+	Ars4:	No  	none	       0	       0	    	    
+	Ars5:	Yes 	 sub	       ?	       0	Ars2	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/Ars5	(R2)1	(R3)0/Ars3	(R4)0/Ars1	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 20
+Functinal Units(working: 2):
+			RS  	LeftCycle
+	Add0:	Ars2	2
+	Add1:	Ars0	2
+	Add2:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 43--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       0	       0	    	    
+	Ars1:	Yes 	 add	       ?	       0	Ars5	    
+	Ars2:	Yes 	 add	       0	       0	    	    
+	Ars3:	Yes 	 add	       ?	       0	Ars1	    
+	Ars4:	Yes 	 add	       0	       0	    	    
+	Ars5:	Yes 	 sub	       ?	       0	Ars2	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/Ars5	(R2)1	(R3)0/Ars4	(R4)0/Ars1	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 21
+Functinal Units(working: 3):
+			RS  	LeftCycle
+	Add0:	Ars2	1
+	Add1:	Ars0	1
+	Add2:	Ars4	3
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 44--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       0	       0	    	    
+	Ars1:	Yes 	 add	       ?	       0	Ars5	    
+	Ars2:	Yes 	 add	       0	       0	    	    
+	Ars3:	Yes 	 add	       ?	       0	Ars1	    
+	Ars4:	Yes 	 add	       0	       0	    	    
+	Ars5:	Yes 	 sub	       ?	       0	Ars2	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/Ars5	(R2)1	(R3)0/Ars4	(R4)0/Ars1	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 21
+Functinal Units(working: 3):
+			RS  	LeftCycle
+	Add0:	Ars2	0
+	Add1:	Ars0	0
+	Add2:	Ars4	2
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 45--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       1	       ?	    	Ars4
+	Ars1:	Yes 	 add	       ?	       0	Ars5	    
+	Ars2:	No  	none	       0	       0	    	    
+	Ars3:	Yes 	 add	       ?	       0	Ars1	    
+	Ars4:	Yes 	 add	       0	       0	    	    
+	Ars5:	Yes 	 sub	       0	       0	    	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/Ars0	(R2)1	(R3)0/Ars4	(R4)0/Ars1	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 22
+Functinal Units(working: 2):
+			RS  	LeftCycle
+	Add0:	Ars5	3
+	Add1:
+	Add2:	Ars4	1
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 46--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       1	       ?	    	Ars4
+	Ars1:	Yes 	 add	       ?	       0	Ars5	    
+	Ars2:	No  	none	       0	       0	    	    
+	Ars3:	Yes 	 add	       ?	       0	Ars1	    
+	Ars4:	Yes 	 add	       0	       0	    	    
+	Ars5:	Yes 	 sub	       0	       0	    	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/Ars0	(R2)1	(R3)0/Ars4	(R4)0/Ars1	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 22
+Functinal Units(working: 2):
+			RS  	LeftCycle
+	Add0:	Ars5	2
+	Add1:
+	Add2:	Ars4	0
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 47--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       1	       0	    	    
+	Ars1:	Yes 	 add	       ?	       0	Ars5	    
+	Ars2:	No  	none	       0	       0	    	    
+	Ars3:	Yes 	 add	       ?	       0	Ars1	    
+	Ars4:	No  	none	       0	       0	    	    
+	Ars5:	Yes 	 sub	       0	       0	    	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/Ars0	(R2)1	(R3)0	(R4)0/Ars1	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 22
+Functinal Units(working: 2):
+			RS  	LeftCycle
+	Add0:	Ars5	1
+	Add1:	Ars0	3
+	Add2:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 48--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       1	       0	    	    
+	Ars1:	Yes 	 add	       ?	       0	Ars5	    
+	Ars2:	No  	none	       0	       0	    	    
+	Ars3:	Yes 	 add	       ?	       0	Ars1	    
+	Ars4:	No  	none	       0	       0	    	    
+	Ars5:	Yes 	 sub	       0	       0	    	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/Ars0	(R2)1	(R3)0	(R4)0/Ars1	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 22
+Functinal Units(working: 2):
+			RS  	LeftCycle
+	Add0:	Ars5	0
+	Add1:	Ars0	2
+	Add2:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 49--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       1	       0	    	    
+	Ars1:	Yes 	 add	       0	       0	    	    
+	Ars2:	No  	none	       0	       0	    	    
+	Ars3:	Yes 	 add	       ?	       0	Ars1	    
+	Ars4:	No  	none	       0	       0	    	    
+	Ars5:	No  	none	       0	       0	    	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/Ars0	(R2)1	(R3)0	(R4)0/Ars1	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 22
+Functinal Units(working: 2):
+			RS  	LeftCycle
+	Add0:	Ars1	3
+	Add1:	Ars0	1
+	Add2:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 50--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	Yes 	 add	       1	       0	    	    
+	Ars1:	Yes 	 add	       0	       0	    	    
+	Ars2:	No  	none	       0	       0	    	    
+	Ars3:	Yes 	 add	       ?	       0	Ars1	    
+	Ars4:	No  	none	       0	       0	    	    
+	Ars5:	No  	none	       0	       0	    	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)0/Ars0	(R2)1	(R3)0	(R4)0/Ars1	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 22
+Functinal Units(working: 2):
+			RS  	LeftCycle
+	Add0:	Ars1	2
+	Add1:	Ars0	0
+	Add2:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 51--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	No  	none	       0	       0	    	    
+	Ars1:	Yes 	 add	       0	       0	    	    
+	Ars2:	No  	none	       0	       0	    	    
+	Ars3:	Yes 	 add	       ?	       0	Ars1	    
+	Ars4:	No  	none	       0	       0	    	    
+	Ars5:	No  	none	       0	       0	    	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)1	(R2)1	(R3)0	(R4)0/Ars1	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 22
+Functinal Units(working: 1):
+			RS  	LeftCycle
+	Add0:	Ars1	1
+	Add1:
+	Add2:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 52--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	No  	none	       0	       0	    	    
+	Ars1:	Yes 	 add	       0	       0	    	    
+	Ars2:	No  	none	       0	       0	    	    
+	Ars3:	Yes 	 add	       ?	       0	Ars1	    
+	Ars4:	No  	none	       0	       0	    	    
+	Ars5:	No  	none	       0	       0	    	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)1	(R2)1	(R3)0	(R4)0/Ars1	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 22
+Functinal Units(working: 1):
+			RS  	LeftCycle
+	Add0:	Ars1	0
+	Add1:
+	Add2:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 53--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	No  	none	       0	       0	    	    
+	Ars1:	No  	none	       0	       0	    	    
+	Ars2:	No  	none	       0	       0	    	    
+	Ars3:	Yes 	 add	       0	       0	    	    
+	Ars4:	No  	none	       0	       0	    	    
+	Ars5:	No  	none	       0	       0	    	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)1	(R2)1	(R3)0	(R4)0	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 22
+Functinal Units(working: 1):
+			RS  	LeftCycle
+	Add0:	Ars3	3
+	Add1:
+	Add2:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 54--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	No  	none	       0	       0	    	    
+	Ars1:	No  	none	       0	       0	    	    
+	Ars2:	No  	none	       0	       0	    	    
+	Ars3:	Yes 	 add	       0	       0	    	    
+	Ars4:	No  	none	       0	       0	    	    
+	Ars5:	No  	none	       0	       0	    	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)1	(R2)1	(R3)0	(R4)0	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 22
+Functinal Units(working: 1):
+			RS  	LeftCycle
+	Add0:	Ars3	2
+	Add1:
+	Add2:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 55--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	No  	none	       0	       0	    	    
+	Ars1:	No  	none	       0	       0	    	    
+	Ars2:	No  	none	       0	       0	    	    
+	Ars3:	Yes 	 add	       0	       0	    	    
+	Ars4:	No  	none	       0	       0	    	    
+	Ars5:	No  	none	       0	       0	    	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)1	(R2)1	(R3)0	(R4)0	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 22
+Functinal Units(working: 1):
+			RS  	LeftCycle
+	Add0:	Ars3	1
+	Add1:
+	Add2:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 56--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	No  	none	       0	       0	    	    
+	Ars1:	No  	none	       0	       0	    	    
+	Ars2:	No  	none	       0	       0	    	    
+	Ars3:	Yes 	 add	       0	       0	    	    
+	Ars4:	No  	none	       0	       0	    	    
+	Ars5:	No  	none	       0	       0	    	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)1	(R2)1	(R3)0	(R4)0	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 22
+Functinal Units(working: 1):
+			RS  	LeftCycle
+	Add0:	Ars3	0
+	Add1:
+	Add2:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+---------------log start---cycle: 57--------------
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Ars0:	No  	none	       0	       0	    	    
+	Ars1:	No  	none	       0	       0	    	    
+	Ars2:	No  	none	       0	       0	    	    
+	Ars3:	No  	none	       0	       0	    	    
+	Ars4:	No  	none	       0	       0	    	    
+	Ars5:	No  	none	       0	       0	    	    
+OpStations:
+			Busy	Op  		Vj  		Vk  	Qj  	Qk  
+	Mrs0:	No  	none	       0	       0	    	    
+	Mrs1:	No  	none	       0	       0	    	    
+	Mrs2:	No  	none	       0	       0	    	    
+Load Buffer:
+			Busy	    Addr
+	LB0:	  No	       0
+	LB1:	  No	       0
+	LB2:	  No	       0
+Regs:
+	(R0)0	(R1)1	(R2)1	(R3)0	(R4)0	(R5)0	(R6)0	(R7)0	
+	(R8)0	(R9)0	(R10)0	(R11)0	(R12)0	(R13)0	(R14)0	(R15)0	
+	(R16)0	(R17)0	(R18)0	(R19)0	(R20)0	(R21)0	(R22)0	(R23)0	
+	(R24)0	(R25)0	(R26)0	(R27)0	(R28)0	(R29)0	(R30)0	(R31)0	
+	(R32, PC): 22
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Add0:
+	Add1:
+	Add2:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Mult0:
+	Mult1:
+Functinal Units(working: 0):
+			RS  	LeftCycle
+	Load0:
+	Load1:
+---------------log done---------------------------
+Instruction status:
+		   Issue	ExecComp	WriteResult
+	0:	       1	       4	       5
+	1:	       2	       5	       6
+	2:	       3	       8	       9
+	3:	       4	      12	      13
+	4:	       5	       8	       9
+	5:	       6	      12	      13
+	6:	       7	      16	      17
+	7:	       8	      11	      12
+	8:	       9	      15	      16
+	9:	      10	      16	      17
+	10:	      12	      20	      21
+	11:	      13	      27	      28
+	12:	      14	      19	      20
+	13:	      16	      23	      24
+	14:	      17	      24	      25
+	15:	      18	      28	      29
+	16:	      20	      32	      33
+	17:	      21	      24	      25
+	18:	      24	      28	      29
+	19:	      25	      32	      33
+	20:	      26	      36	      37
+	21:	      28	      44	      45
+	22:	      29	      32	      33
+	23:	      30	      36	      37
+	24:	      33	      40	      41
+	25:	      34	      37	      38
+	26:	      35	      41	      42
+	27:	      37	      40	      41
+	28:	      38	      44	      45
+	29:	      39	      48	      49
+	30:	      41	      52	      53
+	31:	      42	      56	      57
+	32:	      43	      46	      47
+	33:	      45	      50	      51

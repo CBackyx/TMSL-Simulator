@@ -7,6 +7,7 @@
 #include <string>
 #include <list>
 #include <cstdlib>
+#include <queue>
 
 
 #include "TMSLSimulator.h"
