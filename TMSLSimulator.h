@@ -1,6 +1,13 @@
 #ifndef TMSLSIMULATOR_H
 #define TMSLSIMULATOR_H
 
+#include <cstdio>
+#include <cstdlib>
+#include <iostream>
+#include <string>
+
+using namespace std;
+
 struct ReserveStation {
     bool Busy;
     char Op;
@@ -17,6 +24,7 @@ struct FUState {
     int lineIndex;
     int cycle_todo;
     int owner;
+    int result;
 };
 
 struct Register {
@@ -42,16 +50,22 @@ class TMSLSimulator {
     struct ReserveStation rStations[12];
     struct FUState fuStates[7]; // for that the register index starts from 1
     struct Register registers[33];
+    FILE* logFile;
 
     public:
+        string ifn;
+
         TMSLSimulator();
         ~TMSLSimulator() {}
         void readLines(char* inputFile);
         int doLaunchLines(int start);
         void doClocks();
         void writeRecords();
-        void printState();
+        void printState(int clock);
         void grabFU(int l, int rst);
+        void doFU(int clock);
+        void doCollect(int clock);
+        
 };
 
 #endif
