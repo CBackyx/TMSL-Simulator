@@ -5,8 +5,15 @@
 #include <cstdlib>
 #include <iostream>
 #include <string>
+#include <vector>
 
 using namespace std;
+
+struct ReserveStation;
+struct FUState;
+struct Register;
+struct WindowMember;
+struct Line;
 
 struct ReserveStation {
     bool Busy;
@@ -19,6 +26,8 @@ struct ReserveStation {
     int Fu;
     int LineNum;
     bool Inqueue;
+    vector<pair<int, char>> Q_RS;
+    vector<int> Q_R;
 };
 
 struct FUState {

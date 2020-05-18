@@ -134,18 +134,27 @@ int TMSLSimulator::doLaunchLines(int start) {
                     // printf("hhhhhhhhhhhhhhhhhhhhhh\n");
                     rstation_busy_num[0]++;
                     this->rStations[k].Busy = true;
-                    if (this->registers[cur.rg[1]].stat != -1) this->rStations[k].Qj = this->registers[cur.rg[1]].stat;
+                    if (this->registers[cur.rg[1]].stat != -1) {
+                        this->rStations[k].Qj = this->registers[cur.rg[1]].stat;
+                        this->rStations[this->registers[cur.rg[1]].stat].Q_RS.push_back(make_pair(k, 0));
+                    }
                     else {
                         this->rStations[k].Vj = this->registers[cur.rg[1]].value;
                         this->rStations[k].Qj = -1;
                     }
-                    if (this->registers[cur.rg[2]].stat != -1) this->rStations[k].Qk = this->registers[cur.rg[2]].stat;
+                    if (this->registers[cur.rg[2]].stat != -1) {
+                        this->rStations[k].Qk = this->registers[cur.rg[2]].stat;
+                        this->rStations[this->registers[cur.rg[2]].stat].Q_RS.push_back(make_pair(k, 1));
+                    }
                     else {
                         this->rStations[k].Vk = this->registers[cur.rg[2]].value;
                         this->rStations[k].Qk = -1;
                     }
                     this->rStations[k].Op = lines[i].cmd;
+
                     this->registers[cur.rg[0]].stat = k;
+                    this->rStations[k].Q_R.push_back(cur.rg[0]);
+
                     this->rStations[k].LineNum = i;
                     
                     cur_wm.line_index = i;
@@ -163,18 +172,27 @@ int TMSLSimulator::doLaunchLines(int start) {
                 if (!this->rStations[k].Busy) {
                     rstation_busy_num[1]++;
                     this->rStations[k].Busy = true;
-                    if (this->registers[cur.rg[1]].stat != -1) this->rStations[k].Qj = this->registers[cur.rg[1]].stat;
+                    if (this->registers[cur.rg[1]].stat != -1) {
+                        this->rStations[k].Qj = this->registers[cur.rg[1]].stat;
+                        this->rStations[this->registers[cur.rg[1]].stat].Q_RS.push_back(make_pair(k, 0));
+                    }
                     else {
                         this->rStations[k].Vj = this->registers[cur.rg[1]].value;
                         this->rStations[k].Qj = -1;
                     }
-                    if (this->registers[cur.rg[2]].stat != -1) this->rStations[k].Qk = this->registers[cur.rg[2]].stat;
+                    if (this->registers[cur.rg[2]].stat != -1) {
+                        this->rStations[k].Qk = this->registers[cur.rg[2]].stat;
+                        this->rStations[this->registers[cur.rg[2]].stat].Q_RS.push_back(make_pair(k, 1));
+                    }
                     else {
                         this->rStations[k].Vk = this->registers[cur.rg[2]].value;
                         this->rStations[k].Qk = -1;
                     }
                     this->rStations[k].Op = lines[i].cmd;
+
                     this->registers[cur.rg[0]].stat = k;
+                    this->rStations[k].Q_R.push_back(cur.rg[0]);
+
                     this->rStations[k].LineNum = i;
                     
                     cur_wm.line_index = i;
@@ -194,7 +212,10 @@ int TMSLSimulator::doLaunchLines(int start) {
                     rstation_busy_num[2]++;
                     this->rStations[k].Busy = true;
                     this->rStations[k].Op = lines[i].cmd;
+
                     this->registers[cur.rg[0]].stat = k;
+                    this->rStations[k].Q_R.push_back(cur.rg[0]);
+
                     this->rStations[k].LineNum = i;
 
                     this->rStations[k].Addr = cur.op[0];
@@ -214,7 +235,10 @@ int TMSLSimulator::doLaunchLines(int start) {
                 if (!this->rStations[k].Busy) {
                     rstation_busy_num[0]++;
                     this->rStations[k].Busy = true;
-                    if (this->registers[cur.rg[0]].stat != -1) this->rStations[k].Qj = this->registers[cur.rg[0]].stat;
+                    if (this->registers[cur.rg[0]].stat != -1) {
+                        this->rStations[k].Qj = this->registers[cur.rg[0]].stat;
+                        this->rStations[this->registers[cur.rg[0]].stat].Q_RS.push_back(make_pair(k, 0));
+                    }
                     else {
                         this->rStations[k].Vj = this->registers[cur.rg[0]].value;
                         this->rStations[k].Qj = -1;
@@ -281,7 +305,7 @@ void TMSLSimulator::doClocks() {
         this->doFU(clock);
 
         // print states, used for debug
-        printState(clock);
+        // printState(clock);
 
         clock++;
     }
@@ -415,28 +439,52 @@ void TMSLSimulator::doCollect(int clock) {
     for (int i = 0; i < 7; ++i) {
         FUState& cur_fu = this->fuStates[i];
         if (cur_fu.owner != -1 && cur_fu.cycle_todo == 0) {
+            ReserveStation& cur_rs = this->rStations[cur_fu.owner];
             // write records
             if (!recordsWritten[cur_fu.lineIndex]) {
                 lineRecords[cur_fu.lineIndex][2] = clock;
                 recordsWritten[cur_fu.lineIndex] = true;
             }
             // broadcast result
-            for (int k = 0; k < 12; ++k) {
-                if (this->rStations[k].Qj == cur_fu.owner) {
-                    this->rStations[k].Qj = -1;
-                    this->rStations[k].Vj = cur_fu.result; // TODO
-                } 
-                if (this->rStations[k].Qk == cur_fu.owner) {
-                    this->rStations[k].Qk = -1;
-                    this->rStations[k].Vk = cur_fu.result; // TODO 
+            int q_rs_size = cur_rs.Q_RS.size();
+            int q_r_size = cur_rs.Q_R.size();
+
+            for (int k = 0; k < q_rs_size; ++k) {
+                if (cur_rs.Q_RS[k].second == 0) {
+                    this->rStations[cur_rs.Q_RS[k].first].Qj = -1;
+                    this->rStations[cur_rs.Q_RS[k].first].Vj = cur_fu.result;
+                } else {
+                    this->rStations[cur_rs.Q_RS[k].first].Qk = -1;
+                    this->rStations[cur_rs.Q_RS[k].first].Vk = cur_fu.result;                    
                 }
             }
-            for (int k = 0; k < 33; ++k) {
-                if (this->registers[k].stat == cur_fu.owner) {
-                    this->registers[k].value = cur_fu.result;
-                    this->registers[k].stat = -1;
+
+            for (int k = 0; k < q_r_size; ++k) {
+                if (this->registers[cur_rs.Q_R[k]].stat == cur_fu.owner) {
+                    this->registers[cur_rs.Q_R[k]].stat = -1;
+                    this->registers[cur_rs.Q_R[k]].value = cur_fu.result;
                 }
             }
+
+            // for (int k = 0; k < 12; ++k) {
+            //     if (this->rStations[k].Qj == cur_fu.owner) {
+            //         this->rStations[k].Qj = -1;
+            //         this->rStations[k].Vj = cur_fu.result; // TODO
+            //     } 
+            //     if (this->rStations[k].Qk == cur_fu.owner) {
+            //         this->rStations[k].Qk = -1;
+            //         this->rStations[k].Vk = cur_fu.result; // TODO 
+            //     }
+            // }
+            // for (int k = 0; k < 33; ++k) {
+            //     if (this->registers[k].stat == cur_fu.owner) {
+            //         this->registers[k].value = cur_fu.result;
+            //         this->registers[k].stat = -1;
+            //     }
+            // }
+
+            cur_rs.Q_R.clear();
+            cur_rs.Q_RS.clear();
 
             if (lines[cur_fu.lineIndex].cmd == 'J') {
                 // if is Jump inst
