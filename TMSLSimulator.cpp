@@ -531,7 +531,8 @@ void TMSLSimulator::doCollect(int clock) {
 
 void TMSLSimulator::writeRecords() {
     FILE *fp;
-    fp = fopen((this->ifn + "command_record.txt").c_str(), "w");
+    string mynum = "2017011464_";
+    fp = fopen((mynum + this->ifn + ".log").c_str(), "w");
     if (fp == NULL) {
         printf("Open data_prepare.txt failed!\n");
         exit(-1);
