@@ -8,6 +8,12 @@
 #include <list>
 #include <cstdlib>
 #include <queue>
+#include <ctime>
+#include <chrono>
+#include <utility>
+#include <limits.h>
+#include <string.h>
+
 
 
 #include "TMSLSimulator.h"

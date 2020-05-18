@@ -22,6 +22,9 @@ int old_cur_line_to_launch = 0;
 TMSLSimulator::TMSLSimulator() {
     this->lineNum = 0;
 
+    this->search_clock = false;
+    this->performance = false;
+
     for (int i=0; i<12; ++i) {
         this->rStations[i].Busy = false;
         this->rStations[i].Qj = -1;
@@ -274,7 +277,7 @@ void TMSLSimulator::doClocks() {
     int clock = 1;
     while (true) {
         // printf("clock %d\n", clock);
-        if ((cur_line_to_launch & 0xfff) == 0xfff) printf("%d\n",cur_line_to_launch);
+        // if ((cur_line_to_launch & 0xfff) == 0xfff) printf("%d\n",cur_line_to_launch);
         if (cur_line_to_launch >= this->lineNum && window.empty()) break;
 
         this->doCollect(clock);
@@ -305,9 +308,16 @@ void TMSLSimulator::doClocks() {
         this->doFU(clock);
 
         // print states, used for debug
-        // printState(clock);
+        if (this->search_clock && this->t_clock == clock) {
+            this->printState(clock);
+        } 
 
         clock++;
+    }
+
+    if (clock <= this->t_clock) {
+        printf("The searched clock is out of bound!/n");
+        exit(-1);
     }
 }
 
@@ -553,12 +563,15 @@ void TMSLSimulator::printState(int clock) {
     }
     fprintf(this->logFile, "\n");
 
-    for (int i = 0; i <= 32; ++i) fprintf(this->logFile, "R%d,", i);
+    for (int i = 0; i <= 31; ++i) fprintf(this->logFile, "R%d,", i);
     fprintf(this->logFile, "\n");
-    for (int i = 0; i <= 32; ++i) fprintf(this->logFile, "%d,", this->registers[i].stat);
+    for (int i = 0; i <= 31; ++i) fprintf(this->logFile, "%d,", this->registers[i].stat);
     fprintf(this->logFile, "\n");
-    for (int i = 0; i <= 32; ++i) fprintf(this->logFile, "0x%x,", this->registers[i].value);
+    for (int i = 0; i <= 31; ++i) fprintf(this->logFile, "0x%x,", this->registers[i].value);
     fprintf(this->logFile, "\n");
+
+    fprintf(this->logFile, "\n");
+
 
     fprintf(this->logFile, ",Current Line,Operation,Cycle Remained,RStation\n");
     for (int i = 0; i < 3; ++i) {
@@ -584,10 +597,10 @@ void TMSLSimulator::printState(int clock) {
     // }
     // fprintf(this->logFile, "\n");
 
-    fprintf(this->logFile, "window\n");
-    if (!A_FU_q.empty()) fprintf(this->logFile, "A %d\n", A_FU_q.front());
-    if (!M_FU_q.empty()) fprintf(this->logFile, "M %d\n", M_FU_q.front());
-    if (!L_FU_q.empty()) fprintf(this->logFile, "L %d\n", L_FU_q.front());
+    // fprintf(this->logFile, "window\n");
+    // if (!A_FU_q.empty()) fprintf(this->logFile, "A %d\n", A_FU_q.front());
+    // if (!M_FU_q.empty()) fprintf(this->logFile, "M %d\n", M_FU_q.front());
+    // if (!L_FU_q.empty()) fprintf(this->logFile, "L %d\n", L_FU_q.front());
 
     fprintf(this->logFile, "\n");    
 

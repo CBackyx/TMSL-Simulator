@@ -64,6 +64,9 @@ class TMSLSimulator {
 
     public:
         string ifn;
+        bool performance;
+        bool search_clock;
+        int t_clock;
 
         TMSLSimulator();
         ~TMSLSimulator() {}
