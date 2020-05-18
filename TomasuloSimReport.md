@@ -119,11 +119,24 @@ Tomasulo算法和记分牌算法的根本区别有两点，首先Tomasulo采用�
 ## 五 运行结果
 
 * *.basic.nel 文件的执行结果见log
+
 * Mul.nel:
-  * <img src="C:\Users\HarryM\AppData\Roaming\Typora\typora-user-images\image-20200518164037301.png" alt="image-20200518164037301" style="zoom: 67%;" />
+
+  * ```
+    D:\projects\Arch\TMSL-Simulator>TMSLSimu Mul.nel P
+    Finish read lines
+    Total time cost is 0.001748
+    Finish do Clocks
+    ```
 
 * Big_test.nel
-  * <img src="C:\Users\HarryM\AppData\Roaming\Typora\typora-user-images\image-20200518164139176.png" alt="image-20200518164139176" style="zoom:67%;" />
+
+  * ```
+    D:\projects\Arch\TMSL-Simulator>TMSLSimu Big_test.nel P
+    Finish read lines
+    Total time cost is 2.162202
+    Finish do Clocks
+    ```
 
 
 
